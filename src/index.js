@@ -12,13 +12,19 @@ window.startTimer = function() {
 
 window.countdownTimer = function(hours, minutes, seconds) {
   // Convert hours and minutes to seconds
-  let totalSeconds = (hours * 3600) + (minutes * 60) + seconds;
+  console.log(hours, minutes, seconds)
+  let totalSeconds = (hours * 3600) + (minutes * 60) + Number(seconds);
+
+  console.log((hours * 3600)+(minutes * 60)+Number(seconds))
+  
 
   // Timer interval (1 second)
   const interval = setInterval(() => {
     // Calculate remaining hours, minutes, and seconds
     const remainingHours = Math.floor(totalSeconds / 3600);
+    console.log(remainingHours)
     const remainingMinutes = Math.floor((totalSeconds % 3600) / 60);
+    console.log(remainingMinutes)
     const remainingSeconds = totalSeconds % 60;
 
     // Display the timer
